@@ -8,7 +8,7 @@ In order to set this up, follow these steps;
 5. Open discord in the browser, ensure you are logged in, and refresh
 
 You can verify it is working in a couple of ways;
-1. In discord, after refreshing, open the developer console (A.K.A Inspect Element)
+In discord, after refreshing, open the developer console (A.K.A Inspect Element);
 
   A. Navigate to 'application' and search for 'botId' or 'botToken' in the 'localStorage' section
 
