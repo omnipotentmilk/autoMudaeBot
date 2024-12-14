@@ -375,9 +375,11 @@
             if (response.ok) {
                 const messages = await response.json();
                 return messages;
+            } else {
+                return null;
             }
         } catch (error) {
-            return []; // return empty array if fail to get messages
+            return null;
         }
     }
 
@@ -794,9 +796,18 @@
 
 
     while (true){
-        let rawDiscordMessages = await fetchMessages();
-        console.log('Raw scraped messages:', rawDiscordMessages);
-        await delay(delayMs);
+
+        let sentinel = true;
+        while (sentinel) {
+            let rawDiscordMessages = await fetchMessages();
+            console.log('Raw scraped messages:', rawDiscordMessages);
+            if (!rawDiscordMessages === null) {
+                sentinel = false;
+            } else {
+                sentinel = true;
+            }
+            await delay(delayMs);
+        }
 
         let filteredRequestsAndCharacters = await parseMessages(rawDiscordMessages);
         console.log('Filtered requests and characters:', filteredRequestsAndCharacters);
