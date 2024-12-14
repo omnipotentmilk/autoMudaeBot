@@ -797,16 +797,12 @@
 
     while (true){
 
-        let sentinel = true;
-        while (sentinel) {
-            let rawDiscordMessages = await fetchMessages();
-            console.log('Raw scraped messages:', rawDiscordMessages);
-            if (!rawDiscordMessages === null) {
-                sentinel = false;
-            } else {
-                sentinel = true;
-            }
-            await delay(delayMs);
+        let rawDiscordMessages = await fetchMessages();
+        console.log('Raw scraped messages:', rawDiscordMessages);
+        await delay(delayMs);
+
+        if (rawDiscordMessages === null){
+            continue;
         }
 
         let filteredRequestsAndCharacters = await parseMessages(rawDiscordMessages);
