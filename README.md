@@ -2,7 +2,7 @@ This branch contains the simple tampermonkey implementation of the autoMudaeBot
 
 In order to set this up, follow these steps;
 1. Download [Tampermonkey](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) from the chrome web store
-2. Go to [Extensions](chrome://extensions/) and enable dev mode on the top right
+2. Go to chrome://extensions/ and enable dev mode on the top right
 3. Open and drag main.users.js onto the tampermonkey dashboard
 4. Edit the file, update 'const guildId' and 'const channelId' with your desired serverID and channelID (These can be found by enabling developer mode on discord)
 5. Open discord in the browser, ensure you are logged in, and refresh
