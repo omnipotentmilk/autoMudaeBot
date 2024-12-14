@@ -10,7 +10,7 @@ In order to set this up, follow these steps;
 You can verify it is working in a couple of ways;
 1. In discord, after refreshing, open the developer console (A.K.A Inspect Element)
 
-A. Navigate to 'application' and search for 'botId' or 'botToken' in the 'localStorage' section
+  A. Navigate to 'application' and search for 'botId' or 'botToken' in the 'localStorage' section
 
-B. You can also verify it is working by navigating to 'console', opening the console sidebar, clicking the 'users' section, and looking at console messages from 'userscript' showing the bot scanning messages
+  B. You can also verify it is working by navigating to 'console', opening the console sidebar, clicking the 'users' section, and looking at console messages from 'userscript' showing the bot scanning messages
 
